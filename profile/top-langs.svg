@@ -8,68 +8,95 @@
 
   <text x="25" y="35" class="header">Most Used Languages</text>
 
-  <!-- Progress bar background -->
+  <!-- Progress bar: total width 445px -->
   <rect x="25" y="55" width="445" height="8" rx="4" fill="#333"/>
 
-  <!-- C: 92.83% = 413.1 -->
-  <rect x="25" y="55" width="413" height="8" rx="4" fill="#555555"/>
-  <!-- C++: 4.84% = 21.5 -->
-  <rect x="438" y="55" width="21" height="8" fill="#f34b7d"/>
-  <!-- Assembly: 1.55% = 6.9 -->
-  <rect x="459" y="55" width="7" height="8" fill="#6E4C13"/>
-  <!-- Python: 0.10% + others fill the rest -->
-  <rect x="466" y="55" width="4" height="8" rx="0 4 4 0" fill="#3572A5"/>
+  <!-- C: 54.91% = 244.3px -->
+  <rect x="25" y="55" width="244" height="8" rx="4 0 0 4" fill="#555555"/>
+  <!-- TypeScript: 8.49% = 37.8px -->
+  <rect x="270" y="55" width="38" height="8" fill="#3178c6"/>
+  <!-- Python: 6.67% = 29.7px -->
+  <rect x="309" y="55" width="30" height="8" fill="#3572A5"/>
+  <!-- C++: 5.45% = 24.3px -->
+  <rect x="340" y="55" width="24" height="8" fill="#f34b7d"/>
+  <!-- Rust: 3.19% = 14.2px -->
+  <rect x="365" y="55" width="14" height="8" fill="#dea584"/>
+  <!-- Kotlin: 3.04% = 13.5px -->
+  <rect x="380" y="55" width="14" height="8" fill="#A97BFF"/>
+  <!-- Shell: 3.00% = 13.4px -->
+  <rect x="395" y="55" width="13" height="8" fill="#89e051"/>
+  <!-- OCaml: 2.65% = 11.8px -->
+  <rect x="409" y="55" width="12" height="8" fill="#3be133"/>
+  <!-- Go: 1.71% = 7.6px -->
+  <rect x="422" y="55" width="8" height="8" fill="#00ADD8"/>
+  <!-- Assembly: 1.57% = 7.0px -->
+  <rect x="431" y="55" width="7" height="8" fill="#6E4C13"/>
+  <!-- Other: ~9.3% = remaining -->
+  <rect x="439" y="55" width="31" height="8" rx="0 4 4 0" fill="#666"/>
 
   <!-- Legend row 1 -->
   <g transform="translate(25, 85)">
     <circle cx="6" cy="6" r="6" fill="#555555"/>
-    <text x="18" y="10" class="lang-name">C</text>
-    <text x="32" y="10" class="lang-pct">92.83%</text>
+    <text x="18" y="10" class="lang-name">C <tspan class="lang-pct">54.91%</tspan></text>
   </g>
 
-  <g transform="translate(120, 85)">
-    <circle cx="6" cy="6" r="6" fill="#f34b7d"/>
-    <text x="18" y="10" class="lang-name">C++</text>
-    <text x="38" y="10" class="lang-pct">4.84%</text>
+  <g transform="translate(115, 85)">
+    <circle cx="6" cy="6" r="6" fill="#3178c6"/>
+    <text x="18" y="10" class="lang-name">TypeScript <tspan class="lang-pct">8.49%</tspan></text>
   </g>
 
-  <g transform="translate(225, 85)">
-    <circle cx="6" cy="6" r="6" fill="#6E4C13"/>
-    <text x="18" y="10" class="lang-name">Assembly</text>
-    <text x="72" y="10" class="lang-pct">1.55%</text>
+  <g transform="translate(240, 85)">
+    <circle cx="6" cy="6" r="6" fill="#3572A5"/>
+    <text x="18" y="10" class="lang-name">Python <tspan class="lang-pct">6.67%</tspan></text>
   </g>
 
   <g transform="translate(355, 85)">
-    <circle cx="6" cy="6" r="6" fill="#427819"/>
-    <text x="18" y="10" class="lang-name">Makefile</text>
-    <text x="70" y="10" class="lang-pct">0.23%</text>
+    <circle cx="6" cy="6" r="6" fill="#f34b7d"/>
+    <text x="18" y="10" class="lang-name">C++ <tspan class="lang-pct">5.45%</tspan></text>
   </g>
 
   <!-- Legend row 2 -->
-  <g transform="translate(25, 115)">
-    <circle cx="6" cy="6" r="6" fill="#3572A5"/>
-    <text x="18" y="10" class="lang-name">Python</text>
-    <text x="56" y="10" class="lang-pct">0.10%</text>
+  <g transform="translate(25, 110)">
+    <circle cx="6" cy="6" r="6" fill="#dea584"/>
+    <text x="18" y="10" class="lang-name">Rust <tspan class="lang-pct">3.19%</tspan></text>
   </g>
 
-  <g transform="translate(120, 115)">
+  <g transform="translate(115, 110)">
+    <circle cx="6" cy="6" r="6" fill="#A97BFF"/>
+    <text x="18" y="10" class="lang-name">Kotlin <tspan class="lang-pct">3.04%</tspan></text>
+  </g>
+
+  <g transform="translate(240, 110)">
+    <circle cx="6" cy="6" r="6" fill="#89e051"/>
+    <text x="18" y="10" class="lang-name">Shell <tspan class="lang-pct">3.00%</tspan></text>
+  </g>
+
+  <g transform="translate(355, 110)">
+    <circle cx="6" cy="6" r="6" fill="#3be133"/>
+    <text x="18" y="10" class="lang-name">OCaml <tspan class="lang-pct">2.65%</tspan></text>
+  </g>
+
+  <!-- Legend row 3 -->
+  <g transform="translate(25, 135)">
+    <circle cx="6" cy="6" r="6" fill="#00ADD8"/>
+    <text x="18" y="10" class="lang-name">Go <tspan class="lang-pct">1.71%</tspan></text>
+  </g>
+
+  <g transform="translate(115, 135)">
+    <circle cx="6" cy="6" r="6" fill="#6E4C13"/>
+    <text x="18" y="10" class="lang-name">Assembly <tspan class="lang-pct">1.57%</tspan></text>
+  </g>
+
+  <g transform="translate(240, 135)">
     <circle cx="6" cy="6" r="6" fill="#b2b7f8"/>
-    <text x="18" y="10" class="lang-name">Verilog</text>
-    <text x="60" y="10" class="lang-pct">0.02%</text>
+    <text x="18" y="10" class="lang-name">Verilog <tspan class="lang-pct">1.31%</tspan></text>
   </g>
 
-  <g transform="translate(225, 115)">
-    <circle cx="6" cy="6" r="6" fill="#da291c"/>
-    <text x="18" y="10" class="lang-name">PostScript</text>
-    <text x="76" y="10" class="lang-pct">0.22%</text>
-  </g>
-
-  <g transform="translate(355, 115)">
-    <circle cx="6" cy="6" r="6" fill="#0298c3"/>
-    <text x="18" y="10" class="lang-name">Perl</text>
-    <text x="40" y="10" class="lang-pct">0.04%</text>
+  <g transform="translate(355, 135)">
+    <circle cx="6" cy="6" r="6" fill="#3A4E3A"/>
+    <text x="18" y="10" class="lang-name">CUDA <tspan class="lang-pct">1.16%</tspan></text>
   </g>
 
   <!-- Snapshot date -->
-  <text x="25" y="155" class="lang-name" opacity="0.5">Snapshot: May 19, 2026 (includes private repos, excludes TeX)</text>
+  <text x="25" y="160" class="lang-name" opacity="0.5">Snapshot: May 19, 2026 (includes private repos, excludes TeX)</text>
 </svg>
