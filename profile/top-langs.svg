@@ -1,102 +1,93 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="495" height="170" viewBox="0 0 495 170">
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="280" viewBox="0 0 520 280">
   <style>
     .header { font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif; fill: #70a5fd; }
-    .lang-name { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; }
-    .lang-pct { font: 600 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; }
+    .lang-name { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #c9d1d9; }
+    .lang-pct { font: 400 11px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; }
+    .note { font: 400 10px 'Segoe UI', Ubuntu, Sans-Serif; fill: #38bdae; opacity: 0.5; }
   </style>
-  <rect x="0.5" y="0.5" rx="4.5" width="494" height="169" fill="#1a1b27" stroke="#444" stroke-opacity="1"/>
+  <rect x="0.5" y="0.5" rx="4.5" width="519" height="279" fill="#1a1b27" stroke="#444" stroke-opacity="1"/>
 
   <text x="25" y="35" class="header">Most Used Languages</text>
 
-  <!-- Progress bar: total width 445px -->
-  <rect x="25" y="55" width="445" height="8" rx="4" fill="#333"/>
+  <path d="M 150.0 50.0 A 90 90 0 1 1 122.7 225.8 L 133.3 192.4 A 55 55 0 1 0 150.0 85.0 Z" fill="#555555" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 122.7 225.8 A 90 90 0 0 1 82.9 199.9 L 109.0 176.6 A 55 55 0 0 0 133.3 192.4 Z" fill="#3178c6" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 82.9 199.9 A 90 90 0 0 1 64.3 167.4 L 97.6 156.8 A 55 55 0 0 0 109.0 176.6 Z" fill="#3572A5" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 64.3 167.4 A 90 90 0 0 1 60.0 137.1 L 95.0 138.2 A 55 55 0 0 0 97.6 156.8 Z" fill="#f34b7d" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 60.0 137.1 A 90 90 0 0 1 62.4 119.2 L 96.5 127.3 A 55 55 0 0 0 95.0 138.2 Z" fill="#dea584" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 62.4 119.2 A 90 90 0 0 1 68.0 103.0 L 99.9 117.4 A 55 55 0 0 0 96.5 127.3 Z" fill="#A97BFF" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 68.0 103.0 A 90 90 0 0 1 76.4 88.2 L 105.0 108.4 A 55 55 0 0 0 99.9 117.4 Z" fill="#89e051" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 76.4 88.2 A 90 90 0 0 1 86.0 76.8 L 110.9 101.4 A 55 55 0 0 0 105.0 108.4 Z" fill="#3be133" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 86.0 76.8 A 90 90 0 0 1 93.1 70.3 L 115.2 97.4 A 55 55 0 0 0 110.9 101.4 Z" fill="#00ADD8" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 93.1 70.3 A 90 90 0 0 1 100.3 65.0 L 119.6 94.2 A 55 55 0 0 0 115.2 97.4 Z" fill="#6E4C13" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 100.3 65.0 A 90 90 0 0 1 106.6 61.2 L 123.5 91.8 A 55 55 0 0 0 119.6 94.2 Z" fill="#b2b7f8" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 106.6 61.2 A 90 90 0 0 1 112.4 58.2 L 127.1 90.0 A 55 55 0 0 0 123.5 91.8 Z" fill="#3A4E3A" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 112.4 58.2 A 90 90 0 0 1 150.0 50.0 L 150.0 85.0 A 55 55 0 0 0 127.1 90.0 Z" fill="#666666" stroke="#1a1b27" stroke-width="1.5"/>
 
-  <!-- C: 54.91% = 244.3px -->
-  <rect x="25" y="55" width="244" height="8" rx="4 0 0 4" fill="#555555"/>
-  <!-- TypeScript: 8.49% = 37.8px -->
-  <rect x="270" y="55" width="38" height="8" fill="#3178c6"/>
-  <!-- Python: 6.67% = 29.7px -->
-  <rect x="309" y="55" width="30" height="8" fill="#3572A5"/>
-  <!-- C++: 5.45% = 24.3px -->
-  <rect x="340" y="55" width="24" height="8" fill="#f34b7d"/>
-  <!-- Rust: 3.19% = 14.2px -->
-  <rect x="365" y="55" width="14" height="8" fill="#dea584"/>
-  <!-- Kotlin: 3.04% = 13.5px -->
-  <rect x="380" y="55" width="14" height="8" fill="#A97BFF"/>
-  <!-- Shell: 3.00% = 13.4px -->
-  <rect x="395" y="55" width="13" height="8" fill="#89e051"/>
-  <!-- OCaml: 2.65% = 11.8px -->
-  <rect x="409" y="55" width="12" height="8" fill="#3be133"/>
-  <!-- Go: 1.71% = 7.6px -->
-  <rect x="422" y="55" width="8" height="8" fill="#00ADD8"/>
-  <!-- Assembly: 1.57% = 7.0px -->
-  <rect x="431" y="55" width="7" height="8" fill="#6E4C13"/>
-  <!-- Other: ~9.3% = remaining -->
-  <rect x="439" y="55" width="31" height="8" rx="0 4 4 0" fill="#666"/>
-
-  <!-- Legend row 1 -->
-  <g transform="translate(25, 85)">
+  <g transform="translate(280, 60)">
     <circle cx="6" cy="6" r="6" fill="#555555"/>
-    <text x="18" y="10" class="lang-name">C <tspan class="lang-pct">54.91%</tspan></text>
+    <text x="18" y="10" class="lang-name">C</text>
+    <text x="18" y="23" class="lang-pct">54.91%</text>
   </g>
-
-  <g transform="translate(115, 85)">
+  <g transform="translate(400, 60)">
     <circle cx="6" cy="6" r="6" fill="#3178c6"/>
-    <text x="18" y="10" class="lang-name">TypeScript <tspan class="lang-pct">8.49%</tspan></text>
+    <text x="18" y="10" class="lang-name">TypeScript</text>
+    <text x="18" y="23" class="lang-pct">8.49%</text>
   </g>
-
-  <g transform="translate(240, 85)">
+  <g transform="translate(280, 88)">
     <circle cx="6" cy="6" r="6" fill="#3572A5"/>
-    <text x="18" y="10" class="lang-name">Python <tspan class="lang-pct">6.67%</tspan></text>
+    <text x="18" y="10" class="lang-name">Python</text>
+    <text x="18" y="23" class="lang-pct">6.67%</text>
   </g>
-
-  <g transform="translate(355, 85)">
+  <g transform="translate(400, 88)">
     <circle cx="6" cy="6" r="6" fill="#f34b7d"/>
-    <text x="18" y="10" class="lang-name">C++ <tspan class="lang-pct">5.45%</tspan></text>
+    <text x="18" y="10" class="lang-name">C++</text>
+    <text x="18" y="23" class="lang-pct">5.45%</text>
   </g>
-
-  <!-- Legend row 2 -->
-  <g transform="translate(25, 110)">
+  <g transform="translate(280, 116)">
     <circle cx="6" cy="6" r="6" fill="#dea584"/>
-    <text x="18" y="10" class="lang-name">Rust <tspan class="lang-pct">3.19%</tspan></text>
+    <text x="18" y="10" class="lang-name">Rust</text>
+    <text x="18" y="23" class="lang-pct">3.19%</text>
   </g>
-
-  <g transform="translate(115, 110)">
+  <g transform="translate(400, 116)">
     <circle cx="6" cy="6" r="6" fill="#A97BFF"/>
-    <text x="18" y="10" class="lang-name">Kotlin <tspan class="lang-pct">3.04%</tspan></text>
+    <text x="18" y="10" class="lang-name">Kotlin</text>
+    <text x="18" y="23" class="lang-pct">3.04%</text>
   </g>
-
-  <g transform="translate(240, 110)">
+  <g transform="translate(280, 144)">
     <circle cx="6" cy="6" r="6" fill="#89e051"/>
-    <text x="18" y="10" class="lang-name">Shell <tspan class="lang-pct">3.00%</tspan></text>
+    <text x="18" y="10" class="lang-name">Shell</text>
+    <text x="18" y="23" class="lang-pct">3.0%</text>
   </g>
-
-  <g transform="translate(355, 110)">
+  <g transform="translate(400, 144)">
     <circle cx="6" cy="6" r="6" fill="#3be133"/>
-    <text x="18" y="10" class="lang-name">OCaml <tspan class="lang-pct">2.65%</tspan></text>
+    <text x="18" y="10" class="lang-name">OCaml</text>
+    <text x="18" y="23" class="lang-pct">2.65%</text>
   </g>
-
-  <!-- Legend row 3 -->
-  <g transform="translate(25, 135)">
+  <g transform="translate(280, 172)">
     <circle cx="6" cy="6" r="6" fill="#00ADD8"/>
-    <text x="18" y="10" class="lang-name">Go <tspan class="lang-pct">1.71%</tspan></text>
+    <text x="18" y="10" class="lang-name">Go</text>
+    <text x="18" y="23" class="lang-pct">1.71%</text>
   </g>
-
-  <g transform="translate(115, 135)">
+  <g transform="translate(400, 172)">
     <circle cx="6" cy="6" r="6" fill="#6E4C13"/>
-    <text x="18" y="10" class="lang-name">Assembly <tspan class="lang-pct">1.57%</tspan></text>
+    <text x="18" y="10" class="lang-name">Assembly</text>
+    <text x="18" y="23" class="lang-pct">1.57%</text>
   </g>
-
-  <g transform="translate(240, 135)">
+  <g transform="translate(280, 200)">
     <circle cx="6" cy="6" r="6" fill="#b2b7f8"/>
-    <text x="18" y="10" class="lang-name">Verilog <tspan class="lang-pct">1.31%</tspan></text>
+    <text x="18" y="10" class="lang-name">Verilog</text>
+    <text x="18" y="23" class="lang-pct">1.31%</text>
   </g>
-
-  <g transform="translate(355, 135)">
+  <g transform="translate(400, 200)">
     <circle cx="6" cy="6" r="6" fill="#3A4E3A"/>
-    <text x="18" y="10" class="lang-name">CUDA <tspan class="lang-pct">1.16%</tspan></text>
+    <text x="18" y="10" class="lang-name">CUDA</text>
+    <text x="18" y="23" class="lang-pct">1.16%</text>
+  </g>
+  <g transform="translate(280, 228)">
+    <circle cx="6" cy="6" r="6" fill="#666666"/>
+    <text x="18" y="10" class="lang-name">Other</text>
+    <text x="18" y="23" class="lang-pct">6.85%</text>
   </g>
 
-  <!-- Snapshot date -->
-  <text x="25" y="160" class="lang-name" opacity="0.5">Snapshot: May 19, 2026 (excludes TeX)</text>
+  <text x="25" y="268" class="note">Snapshot: May 19, 2026 (excludes TeX)</text>
 </svg>
