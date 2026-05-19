@@ -98,5 +98,5 @@
   </g>
 
   <!-- Snapshot date -->
-  <text x="25" y="160" class="lang-name" opacity="0.5">Snapshot: May 19, 2026 (includes private repos, excludes TeX)</text>
+  <text x="25" y="160" class="lang-name" opacity="0.5">Snapshot: May 19, 2026 (excludes TeX)</text>
 </svg>
