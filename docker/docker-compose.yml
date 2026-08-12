@@ -1,0 +1,24 @@
+# Example homelab service. Drop this service into your existing compose stack
+# (or run it standalone with `docker compose up --build` from this directory).
+#
+# On `up` it regenerates profile/stats.svg + profile/top-langs.svg from every
+# repo you've committed to (public, private, org) and pushes the changes.
+#
+# Put GH_TOKEN in a .env file next to this compose file (and gitignore it):
+#     GH_TOKEN=ghp_your_pat_with_repo_and_read_org
+services:
+  profile-cards:
+    build: .
+    environment:
+      # PAT with 'repo' + 'read:org' scopes. Reads private/org repos and pushes.
+      GH_TOKEN: ${GH_TOKEN:?set GH_TOKEN in your .env}
+      # Optional overrides:
+      # PROFILE_REPO: jameshoweee/jameshoweee
+      # BRANCH: main
+      # GIT_NAME: "James Howe"
+      # GIT_EMAIL: "jameshoweee@users.noreply.github.com"
+      # Uncomment to keep the container running and refresh on a timer (seconds)
+      # instead of exiting after one pass:
+      # REFRESH_INTERVAL: 86400
+    # One-shot by default: run on `up`, then exit.
+    restart: "no"
