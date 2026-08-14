@@ -123,12 +123,14 @@ def search_count(q: str) -> int:
 # --------------------------------------------------------------------------- #
 # Data gathering
 # --------------------------------------------------------------------------- #
-def gather_stats(created_year: int) -> dict:
-    # Stars: your own non-fork repos.
-    owned = rest(f"/users/{USER}/repos?per_page=100&type=owner")
+def gather_stats(created_year: int, repo_count: int) -> dict:
+    # Stars: all your own repos, public AND private (all-time). The
+    # /user/repos endpoint (unlike /users/{login}/repos) includes private.
+    owned = rest("/user/repos?per_page=100&affiliation=owner")
     stars = sum(r["stargazers_count"] for r in owned if not r["fork"])
 
-    # Commits: sum of all-time contributions incl. private (restricted).
+    # Commits: sum of all-time contributions incl. private (restricted),
+    # across every repo you've committed to (own, org, external).
     this_year = datetime.date.today().year
     commits = 0
     for y in range(created_year, this_year + 1):
@@ -138,14 +140,11 @@ def gather_stats(created_year: int) -> dict:
         c = graphql(q)["user"]["contributionsCollection"]
         commits += c["totalCommitContributions"] + c["restrictedContributionsCount"]
 
+    # PRs / issues: all-time, every repo the token can see (public + private).
     prs = search_count(f"type:pr author:{USER}")
     issues = search_count(f"type:issue author:{USER}")
-    contributed = graphql(
-        f'query{{user(login:"{USER}"){{repositoriesContributedTo(first:1,'
-        f"contributionTypes:[COMMIT,PULL_REQUEST,ISSUE,REPOSITORY]){{totalCount}}}}}}"
-    )["user"]["repositoriesContributedTo"]["totalCount"]
     return {"stars": stars, "commits": commits, "prs": prs,
-            "issues": issues, "contributed": contributed}
+            "issues": issues, "repos": repo_count}
 
 
 def _authored(full_name: str) -> bool:
@@ -153,7 +152,9 @@ def _authored(full_name: str) -> bool:
     return isinstance(commits, list) and len(commits) >= 1
 
 
-def gather_languages() -> list[tuple[str, float]]:
+def gather_authored() -> list[str]:
+    """Every repo you can see (own, collaborator, org member) that you've
+    authored at least one commit in. Public and private."""
     repos = rest(
         "/user/repos?per_page=100&affiliation=owner,collaborator,organization_member"
     )
@@ -161,7 +162,28 @@ def gather_languages() -> list[tuple[str, float]]:
     with ThreadPoolExecutor(max_workers=16) as ex:
         mine = [n for n, ok in zip(names, ex.map(_authored, names)) if ok]
     print(f"  authored commits in {len(mine)}/{len(names)} accessible repos")
+    return mine
 
+
+def gather_repo_count(created_year: int, mine: list[str]) -> int:
+    """All-time distinct repos you've committed to: the accessible set above,
+    plus external repos you contributed to but don't belong to (caught via the
+    per-year contributions API, e.g. open-quantum-safe/liboqs-python)."""
+    allrepos = set(mine)
+    this_year = datetime.date.today().year
+    for y in range(created_year, this_year + 1):
+        q = (f'query{{user(login:"{USER}"){{contributionsCollection('
+             f'from:"{y}-01-01T00:00:00Z",to:"{y}-12-31T23:59:59Z"){{'
+             f'commitContributionsByRepository(maxRepositories:100){{'
+             f'repository{{nameWithOwner}}}}}}}}}}')
+        byrepo = (graphql(q)["user"]["contributionsCollection"]
+                  ["commitContributionsByRepository"])
+        for r in byrepo:
+            allrepos.add(r["repository"]["nameWithOwner"])
+    return len(allrepos)
+
+
+def gather_languages(mine: list[str]) -> list[tuple[str, float]]:
     with ThreadPoolExecutor(max_workers=16) as ex:
         per_repo = list(ex.map(lambda n: rest(f"/repos/{n}/languages"), mine))
 
@@ -195,7 +217,7 @@ def render_stats(s: dict) -> str:
          "M7.177 3.073L9.573.677A.25.25 0 0110 .854v4.792a.25.25 0 01-.427.177L7.177 3.427a.25.25 0 010-.354zM3.75 2.5a.75.75 0 100 1.5.75.75 0 000-1.5zm-2.25.75a2.25 2.25 0 113 2.122v5.256a2.251 2.251 0 11-1.5 0V5.372A2.25 2.25 0 011.5 3.25zM11 2.5h-1V4h1a1 1 0 011 1v5.628a2.251 2.251 0 101.5 0V5A2.5 2.5 0 0011 2.5zm1 10.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.75 12a.75.75 0 100 1.5.75.75 0 000-1.5z"),
         ("Total Issues", f"{s['issues']:,}",
          "M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"),
-        ("Contributed to", f"{s['contributed']} repos",
+        ("Repositories", f"{s['repos']}",
          "M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 110-1.5h1.75v-2h-8a1 1 0 00-.714 1.7.75.75 0 01-1.072 1.05A2.495 2.495 0 012 11.5v-9zm10.5-1h-8a1 1 0 00-1 1v6.708A2.486 2.486 0 014.5 9h8V1.5zm-8 11h1.5v-2H4.5a1 1 0 100 2z"),
     ]
     parts = [
@@ -216,7 +238,7 @@ def render_stats(s: dict) -> str:
             parts.append('    <path d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"/>')
             parts.append('    <path fill-rule="evenodd" d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"/>')
         else:
-            fr = ' fill-rule="evenodd"' if label == "Contributed to" else ""
+            fr = ' fill-rule="evenodd"' if label == "Repositories" else ""
             parts.append(f'    <path{fr} d="{icon}"/>')
         parts.append("  </svg>")
         parts.append(f'  <text x="50" y="{y + 13}" class="stat-label">{label}</text>')
@@ -288,11 +310,17 @@ def main() -> None:
     created = rest(f"/users/{USER}")["created_at"]
     created_year = int(created[:4])
 
+    print("Scanning repos you've committed to...")
+    mine = gather_authored()
+    repo_count = gather_repo_count(created_year, mine)
+    print(f"  {repo_count} distinct repos all-time (incl. own + external)")
+
     print("Gathering stats...")
-    stats = gather_stats(created_year)
+    stats = gather_stats(created_year, repo_count)
     print(f"  {stats}")
-    print("Gathering languages (this scans every repo you've committed to)...")
-    langs = gather_languages()
+
+    print("Gathering languages...")
+    langs = gather_languages(mine)
     print("  " + " | ".join(f"{n} {f*100:.1f}%" for n, f in langs))
 
     os.makedirs(args.out, exist_ok=True)

@@ -2,7 +2,9 @@
 
 Regenerates the two stat cards shown on the profile README:
 
-- `profile/stats.svg` — stars, commits, PRs, issues, repos contributed to
+- `profile/stats.svg` — stars, commits, PRs, issues, and total repositories
+  (all counted all-time and across your own + org + external repos, private
+  included; "Repositories" is every distinct repo you've authored a commit in)
 - `profile/top-langs.svg` — most used languages (donut)
 
 Both are plain SVG in the `tokyonight` palette. They are committed to the repo,
