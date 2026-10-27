@@ -8,39 +8,39 @@
   <rect x="0.5" y="0.5" rx="4.5" width="519" height="279" fill="#1a1b27" stroke="#444" stroke-opacity="1"/>
   <text x="25" y="35" class="header">Most Used Languages</text>
 
-  <path d="M 150.0 50.0 A 90 90 0 0 1 233.9 172.7 L 201.2 160.0 A 55 55 0 0 0 150.0 85.0 Z" fill="#555555" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 233.9 172.7 A 90 90 0 0 1 121.5 225.4 L 132.6 192.2 A 55 55 0 0 0 201.2 160.0 Z" fill="#3572A5" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 121.5 225.4 A 90 90 0 0 1 70.7 182.5 L 101.5 166.0 A 55 55 0 0 0 132.6 192.2 Z" fill="#3178c6" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 70.7 182.5 A 90 90 0 0 1 60.0 142.5 L 95.0 141.5 A 55 55 0 0 0 101.5 166.0 Z" fill="#00ADD8" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 60.0 142.5 A 90 90 0 0 1 64.4 112.1 L 97.7 122.9 A 55 55 0 0 0 95.0 141.5 Z" fill="#f34b7d" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 64.4 112.1 A 90 90 0 0 1 72.2 94.7 L 102.5 112.3 A 55 55 0 0 0 97.7 122.9 Z" fill="#A97BFF" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 72.2 94.7 A 90 90 0 0 1 81.8 81.2 L 108.3 104.1 A 55 55 0 0 0 102.5 112.3 Z" fill="#3be133" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 81.8 81.2 A 90 90 0 0 1 92.2 71.0 L 114.7 97.8 A 55 55 0 0 0 108.3 104.1 Z" fill="#dea584" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 92.2 71.0 A 90 90 0 0 1 103.2 63.1 L 121.4 93.0 A 55 55 0 0 0 114.7 97.8 Z" fill="#b2b7f8" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 103.2 63.1 A 90 90 0 0 1 114.2 57.4 L 128.1 89.5 A 55 55 0 0 0 121.4 93.0 Z" fill="#e34c26" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 114.2 57.4 A 90 90 0 0 1 122.2 54.4 L 133.0 87.7 A 55 55 0 0 0 128.1 89.5 Z" fill="#DA5B0B" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 122.2 54.4 A 90 90 0 0 1 129.3 52.4 L 137.4 86.5 A 55 55 0 0 0 133.0 87.7 Z" fill="#76d275" stroke="#1a1b27" stroke-width="1.5"/>
-  <path d="M 129.3 52.4 A 90 90 0 0 1 150.0 50.0 L 150.0 85.0 A 55 55 0 0 0 137.4 86.5 Z" fill="#666666" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 150.0 50.0 A 90 90 0 0 1 233.9 172.6 L 201.3 160.0 A 55 55 0 0 0 150.0 85.0 Z" fill="#555555" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 233.9 172.6 A 90 90 0 0 1 121.6 225.4 L 132.7 192.2 A 55 55 0 0 0 201.3 160.0 Z" fill="#3572A5" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 121.6 225.4 A 90 90 0 0 1 70.6 182.4 L 101.5 165.9 A 55 55 0 0 0 132.7 192.2 Z" fill="#3178c6" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 70.6 182.4 A 90 90 0 0 1 60.0 142.6 L 95.0 141.6 A 55 55 0 0 0 101.5 165.9 Z" fill="#00ADD8" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 60.0 142.6 A 90 90 0 0 1 64.4 112.1 L 97.7 123.0 A 55 55 0 0 0 95.0 141.6 Z" fill="#f34b7d" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 64.4 112.1 A 90 90 0 0 1 72.2 94.7 L 102.5 112.3 A 55 55 0 0 0 97.7 123.0 Z" fill="#A97BFF" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 72.2 94.7 A 90 90 0 0 1 81.8 81.3 L 108.3 104.1 A 55 55 0 0 0 102.5 112.3 Z" fill="#3be133" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 81.8 81.3 A 90 90 0 0 1 92.2 71.0 L 114.7 97.9 A 55 55 0 0 0 108.3 104.1 Z" fill="#dea584" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 92.2 71.0 A 90 90 0 0 1 103.1 63.2 L 121.4 93.0 A 55 55 0 0 0 114.7 97.9 Z" fill="#b2b7f8" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 103.1 63.2 A 90 90 0 0 1 114.2 57.4 L 128.1 89.5 A 55 55 0 0 0 121.4 93.0 Z" fill="#e34c26" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 114.2 57.4 A 90 90 0 0 1 122.1 54.4 L 133.0 87.7 A 55 55 0 0 0 128.1 89.5 Z" fill="#DA5B0B" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 122.1 54.4 A 90 90 0 0 1 129.3 52.4 L 137.3 86.5 A 55 55 0 0 0 133.0 87.7 Z" fill="#76d275" stroke="#1a1b27" stroke-width="1.5"/>
+  <path d="M 129.3 52.4 A 90 90 0 0 1 150.0 50.0 L 150.0 85.0 A 55 55 0 0 0 137.3 86.5 Z" fill="#666666" stroke="#1a1b27" stroke-width="1.5"/>
 
   <g transform="translate(280, 60)">
     <circle cx="6" cy="6" r="6" fill="#555555"/>
     <text x="18" y="10" class="lang-name">C</text>
-    <text x="18" y="23" class="lang-pct">30.92%</text>
+    <text x="18" y="23" class="lang-pct">30.91%</text>
   </g>
   <g transform="translate(400, 60)">
     <circle cx="6" cy="6" r="6" fill="#3572A5"/>
     <text x="18" y="10" class="lang-name">Python</text>
-    <text x="18" y="23" class="lang-pct">24.21%</text>
+    <text x="18" y="23" class="lang-pct">24.20%</text>
   </g>
   <g transform="translate(280, 88)">
     <circle cx="6" cy="6" r="6" fill="#3178c6"/>
     <text x="18" y="10" class="lang-name">TypeScript</text>
-    <text x="18" y="23" class="lang-pct">12.05%</text>
+    <text x="18" y="23" class="lang-pct">12.08%</text>
   </g>
   <g transform="translate(400, 88)">
     <circle cx="6" cy="6" r="6" fill="#00ADD8"/>
     <text x="18" y="10" class="lang-name">Go</text>
-    <text x="18" y="23" class="lang-pct">7.38%</text>
+    <text x="18" y="23" class="lang-pct">7.35%</text>
   </g>
   <g transform="translate(280, 116)">
     <circle cx="6" cy="6" r="6" fill="#f34b7d"/>
@@ -60,7 +60,7 @@
   <g transform="translate(400, 144)">
     <circle cx="6" cy="6" r="6" fill="#dea584"/>
     <text x="18" y="10" class="lang-name">Rust</text>
-    <text x="18" y="23" class="lang-pct">2.57%</text>
+    <text x="18" y="23" class="lang-pct">2.58%</text>
   </g>
   <g transform="translate(280, 172)">
     <circle cx="6" cy="6" r="6" fill="#b2b7f8"/>
@@ -80,7 +80,7 @@
   <g transform="translate(400, 200)">
     <circle cx="6" cy="6" r="6" fill="#76d275"/>
     <text x="18" y="10" class="lang-name">Starlark</text>
-    <text x="18" y="23" class="lang-pct">1.31%</text>
+    <text x="18" y="23" class="lang-pct">1.32%</text>
   </g>
   <g transform="translate(280, 228)">
     <circle cx="6" cy="6" r="6" fill="#666666"/>
@@ -88,5 +88,5 @@
     <text x="18" y="23" class="lang-pct">3.69%</text>
   </g>
 
-  <text x="25" y="268" class="note">Updated 2026-10-23 (excludes TeX)</text>
+  <text x="25" y="268" class="note">Updated 2026-10-27 (excludes TeX)</text>
 </svg>
